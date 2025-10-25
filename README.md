@@ -77,19 +77,21 @@ MOVIX/
 ```
 
 🧠 Tech Stack
+```
+Category			Tech
 
-Category	Tech
+⚛️ Frontend			React 19 (Vite)
 
-⚛️ Frontend	React 19 (Vite)
+🎨 Styling			Tailwind CSS 4.1
 
-🎨 Styling	Tailwind CSS 4.1
+🎥 API				TMDB (The Movie Database)
 
-🎥 API	TMDB (The Movie Database)
-
-🧩 Hooks	react-use (debounce)
+🧩 Hooks			react-use (debounce)
+```
 
 🧾 Environment Variables
-
+```
 Variable			Description
 
 VITE_TMDB_API_KEY	Your TMDB API key (get it from themoviedb.org)
+```
