@@ -37,7 +37,6 @@ Search, explore trending titles, and browse popular movies — all in one smooth
 ## 🧩 **Folder Structure**
 
 
-<div>
 MOVIX/
 ├── public/
 │   ├── hero.png
@@ -56,7 +55,6 @@ MOVIX/
 ├── package.json
 ├── vite.config.js
 └── README.md
-</div>
 
 
 ⚙️ Setup & Installation
