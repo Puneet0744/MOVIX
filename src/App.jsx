@@ -104,9 +104,9 @@ const App = () => {
            <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
         </header>
 
-        <section className='trending-movies mt-10'>
+        {!debouncedSearchTerm && trendingMovies.length > 0 && (
+          <section className='trending-movies mt-10'>
             <h2 className="text-2xl font-semibold mb-4">Trending Movies</h2>
-
             {isLoading && trendingMovies.length === 0 ? (
               <Spinner />
             ) : (
@@ -117,6 +117,7 @@ const App = () => {
               </div>
             )}
           </section>
+        )}
 
         <section className='all-movies'>
           <h2 className="mt-[40px]">All Movies</h2>
