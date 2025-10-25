@@ -40,37 +40,21 @@ Search, explore trending titles, and browse popular movies — all in one smooth
 MOVIX/
 
 ├── public/
-
 │   ├── hero.png
-
 │   ├── star.svg
-
 │   ├── no-movie.png
-
 │   └── favicon.ico
-
 ├── src/
-
 │   ├── components/
-
 │   │   ├── MovieCard.jsx
-
 │   │   ├── Search.jsx
-
 │   │   └── Spinner.jsx
-
 │   ├── App.jsx
-
 │   ├── main.jsx
-
 │   └── index.css
-
 ├── .gitignore
-
 ├── package.json
-
 ├── vite.config.js
-
 └── README.md
 
 ⚙️ Setup & Installation
