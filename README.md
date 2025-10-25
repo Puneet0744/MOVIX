@@ -59,25 +59,22 @@ MOVIX/
 
 ⚙️ Setup & Installation
 
+```
 1. Clone the Repository
-
 	git clone https://github.com/Puneet0744/MOVIX.git
-
-cd MOVIX
+	cd MOVIX
 
 2. Install Dependencies
-
 	npm install
 
 3. Set Up Environment Variables
-
 	Create a .env file in the project root:
-
 	VITE_TMDB_API_KEY=your_tmdb_api_key_here
 
 4. Start Development Server
-
    npm run dev
+
+```
 
 🧠 Tech Stack
 
