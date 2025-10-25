@@ -1,254 +1,114 @@
-<<<<<<< HEAD
-# MOVIX
+<div align="center">
 
-Modern, responsive movie discovery app built with React + Vite + TailwindCSS and powered by the TMDB API.
+# 🎬 **MOVIX**  
+### _Find Movies You'll Enjoy Without the Hassle_
 
-Badges:  
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![Vite](https://img.shields.io/badge/Bundler-Vite-blue)](https://vitejs.dev/) [![React](https://img.shields.io/badge/Library-React-61DAFB)](https://reactjs.org/)
+A sleek, modern movie discovery app built with **React (Vite)**, **Tailwind CSS**, and the **TMDB API**.  
+Search, explore trending titles, and browse popular movies — all in one smooth experience.  
 
----
-
-## Table of contents
-- [Demo](#demo)
-- [Features](#features)
-- [Quick start](#quick-start)
-- [Environment variables](#environment-variables)
-- [TMDB notes](#tmdb-notes)
-- [Project structure](#project-structure)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
+![TMDB Logo](https://upload.wikimedia.org/wikipedia/commons/6/69/The_Movie_Database_%28TMDb%29_Logo.svg#gh-dark-mode-only)
+![Hero Banner](public/hero.png)
 
 ---
 
-## Demo
-Run locally (below) — optionally add screenshots/GIFs to /public and reference here.
+[![Made with React](https://img.shields.io/badge/Made%20with-React-61DBFB?style=for-the-badge&logo=react)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Styled%20with-TailwindCSS-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Bundled%20with-Vite-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+[![TMDB API](https://img.shields.io/badge/API-TMDB-01b4e4?style=for-the-badge&logo=themoviedatabase)](https://www.themoviedb.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](./LICENSE)
+
+</div>
 
 ---
 
-## Features
-- Clean, dark cinematic UI (TailwindCSS)
-- Trending movies feed (TMDB)
-- Search movies with debounce
-- Save favorites to localStorage
-- Responsive layout, optimized for mobile and desktop
+## 🚀 **Features**
+
+✨ **Search Movies** – Find any movie with real-time suggestions  
+🔥 **Trending Section** – Discover the hottest movies of the week  
+🎞️ **Popular Picks** – Automatically lists trending/popular films  
+🌈 **Beautiful UI** – Powered by Tailwind CSS  
+📱 **Responsive Design** – Works across all devices  
+⚡ **Fast Builds** – Optimized with Vite  
+🌀 **Loading Spinner** – Smooth feedback during fetches  
+💾 **Appwrite Ready** – Optional analytics or backend tracking  
 
 ---
 
-## Quick start
+## 🧩 **Folder Structure**
 
-1. Clone
-   git clone https://github.com/Puneet0744/MOVIX.git
-   cd MOVIX
-
-2. Install
-   npm install
-
-3. Add API key (see below)
-
-4. Run
-   npm run dev
-   Visit http://localhost:5173
-
-Build for production:
-   npm run build
-Preview build:
-   npm run preview
-
----
-
-## Environment variables
-Create a `.env` in project root:
-
-VITE_TMDB_API_KEY=your_tmdb_api_key_here
-
-Important: For TMDB v3 endpoints the library expects the API key as `api_key` query parameter. If you use a v4 token, use Authorization: Bearer <token> and TMDB v4 endpoints accordingly.
-
----
-
-## TMDB notes
-Base API: `https://api.themoviedb.org/3`  
-Image base: `https://image.tmdb.org/t/p/w500/{poster_path}`
-
-Common endpoints used:
-- Search: `/search/movie?query={query}&api_key={KEY}`
-- Trending: `/trending/movie/week?api_key={KEY}`
-- Discover/popularity: `/discover/movie?sort_by=popularity.desc&api_key={KEY}`
-
----
-
-## Project structure
-src/
-- components/ — MovieCard, Search, Footer, etc.
-- App.jsx — main app logic
-- main.jsx, index.css
-
-Public folder contains images and static assets.
-
----
-
-## Troubleshooting
-- No results / 401: verify VITE_TMDB_API_KEY in `.env` and restart dev server.
-- CORS / network errors: check console and that you are using the correct TMDB endpoint/query format.
-- Search not updating: debounce is used — wait ~500ms after typing.
-
-If fetch returns no `results` array, ensure your fetch URL includes `api_key` (TMDB v3 style) or uses correct Authorization for v4.
-
----
-
-## Contributing
-PRs welcome. Keep changes small, include tests if applicable, and update README with relevant usage notes.
-
----
-
-## License
-MIT — see LICENSE.
-
----
-
-Author: Puneet Khandelwal — GitHub: @Puneet0744
-=======
-# 🎬 MOVIX – Modern Movie Finder App  
-
-> 🚀 A modern, responsive movie discovery app built with **React + Vite + TailwindCSS**, powered by the **TMDB API**.  
-> Search, browse, and explore trending movies with sleek animations and dynamic UI.  
-
----
-
-## 🌟 Features
-
-✨ **Beautiful UI** – Clean, dark, and cinematic design using TailwindCSS  
-🔥 **Trending Movies Section** – Shows daily trending movies from TMDB  
-🔍 **Smart Search** – Find any movie instantly using TMDB search API  
-❤️ **Favorites** – Save movies locally using `localStorage`  
-📱 **Responsive** – Works seamlessly on all devices  
-⚡ **Fast & Modern** – Built with **Vite** and component-based React structure  
-
----
-
-## 🧩 Folder Structure
-
-> The folder structure follows a modular React layout.  
-👉 You can view it live here:  
-[**📁 GitHub Repository Folder Structure**](https://github.com/Puneet0744/MOVIX)
 
 MOVIX/
+
 ├── public/
-│ ├── no-movie.png
-│ ├── star.svg
-│ └── ...
+
+│   ├── hero.png
+
+│   ├── star.svg
+
+│   ├── no-movie.png
+
+│   └── favicon.ico
+
 ├── src/
-│ ├── components/
-│ │ ├── MovieCard.jsx
-│ │ ├── Navbar.jsx
-│ │ ├── TrendingMovies.jsx
-│ │ └── ...
-│ ├── App.jsx
-│ ├── main.jsx
-│ ├── index.css
-│ └── ...
+
+│   ├── components/
+
+│   │   ├── MovieCard.jsx
+
+│   │   ├── Search.jsx
+
+│   │   └── Spinner.jsx
+
+│   ├── App.jsx
+
+│   ├── main.jsx
+
+│   └── index.css
+
 ├── .gitignore
+
 ├── package.json
-└── vite.config.js
 
-yaml
-Copy code
+├── vite.config.js
 
----
+└── README.md
 
-## ⚙️ Tech Stack
+⚙️ Setup & Installation
 
-| Category | Technologies |
-|-----------|---------------|
-| **Frontend** | React 19, Vite |
-| **Styling** | TailwindCSS 4.1 |
-| **Icons** | Lucide React, React Icons |
-| **API** | [TMDB API](https://www.themoviedb.org/documentation/api) |
-| **Storage** | localStorage |
-| **Deployment** | Netlify / GitHub Pages |
+1. Clone the Repository
 
----
+	git clone https://github.com/Puneet0744/MOVIX.git
 
-## 🔑 Environment Variables
-
-You need a **TMDB API key** to fetch movies.
-
-1. Create a `.env` file in your project root.  
-2. Add the following line:
-
-
-VITE_TMDB_API_KEY=your_tmdb_api_key_here
-Get your free API key here → TMDB Developer Portal
-
-🚀 Run Locally
-Clone the project
-
-bash
-Copy code
-git clone https://github.com/Puneet0744/MOVIX.git
 cd MOVIX
-Install dependencies
 
-bash
-Copy code
-npm install
-Start the development server
+2. Install Dependencies
 
-bash
-Copy code
-npm run dev
-Open your browser and visit → http://localhost:5173
+	npm install
 
-🧠 API Reference (TMDB)
-Base URL:
+3. Set Up Environment Variables
 
-arduino
-Copy code
-https://api.themoviedb.org/3
-Feature	Endpoint
-Search Movies	/search/movie?query={movie_name}
-Trending Movies	/trending/movie/day
-Image Base URL	https://image.tmdb.org/t/p/w500/{poster_path}
+	Create a .env file in the project root:
 
-🖼️ Screenshots
-Home Page	Trending Movies
-	
+	VITE_TMDB_API_KEY=your_tmdb_api_key_here
 
-💾 Deployment
-Easily deploy to Netlify or GitHub Pages:
+4. Start Development Server
 
-🔹 Deploy on Netlify
-Go to Netlify
+   npm run dev
 
-Click New Site → Import from Git
+🧠 Tech Stack
 
-Connect your GitHub repo
+Category	Tech
 
-Add environment variable → VITE_TMDB_API_KEY
+⚛️ Frontend	React 19 (Vite)
 
-Click Deploy
+🎨 Styling	Tailwind CSS 4.1
 
-🧰 Scripts
-Command	Description
-npm run dev	Start local dev server
-npm run build	Build for production
-npm run preview	Preview production build
+🎥 API	TMDB (The Movie Database)
 
-❤️ Acknowledgements
-TMDB API for providing movie data
+🧩 Hooks	react-use (debounce)
 
-TailwindCSS for elegant styling
+🧾 Environment Variables
 
-Lucide React for clean icons
+Variable			Description
 
-React & Vite for the blazing-fast setup
-
-👨‍💻 Author
-Puneet Khandelwal
-📍 India
-💼 GitHub Profile
-
-🏁 License
-This project is MIT licensed.
-Feel free to fork and modify it for your own use.
->>>>>>> 178cd5cbe5dbbf7a9282833eb832b0dcf60e4314
+VITE_TMDB_API_KEY	Your TMDB API key (get it from themoviedb.org)
